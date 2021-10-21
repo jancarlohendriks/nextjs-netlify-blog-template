@@ -17,12 +17,15 @@ export default function Navigation() {
             </Link>
           </li>
           <li>
+            <Link href="/read-me">
+              <a className={ router.pathname.startsWith("/read-me") ? "active" : null } >
+                read me
+              </a>
+            </Link>
+          </li>
+          <li>
             <Link href="/posts">
-              <a
-                className={
-                  router.pathname.startsWith("/posts") ? "active" : null
-                }
-              >
+              <a className={ router.pathname.startsWith("/posts") ? "active" : null } >
                 blog
               </a>
             </Link>
