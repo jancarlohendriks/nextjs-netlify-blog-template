@@ -1,0 +1,35 @@
+.site-foot {
+  padding: 1.33rem 0 2.36rem;
+  text-align: center;
+}
+
+.site-head {
+  padding: 1.77rem 0;
+}
+
+.site-head__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-head__brand {
+  flex-shrink: 0;
+  margin-inline-end: 1.77rem;
+  transform: translateY(0.25rem);
+}
+
+.site-head__brand svg {
+  width: 100px;
+}
+
+.site-head__nav {
+  padding: 0.75rem 0;
+}
+
+@media (min-width: 37em) {
+  .site-head__brand svg {
+    width: 160px;
+  }
+}

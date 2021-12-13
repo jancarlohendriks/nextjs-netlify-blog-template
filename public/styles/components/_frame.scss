@@ -1,0 +1,39 @@
+.frame {
+  position: relative;
+}
+
+.frame::before {
+  content: "";
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -0.25rem;
+  left: -0.25rem;
+  border: 0.125rem solid var(--color-dark);
+  z-index: 1;
+}
+
+.frame[data-frame="primary"]::before {
+  border-color: var(--color-primary);
+}
+
+.frame[data-frame="secondary"]::before {
+  border-color: var(--color-secondary);
+}
+
+.frame[data-frame="quaternary"]::before {
+  border-color: var(--color-quaternary);
+}
+
+.frame[data-frame="quinary"]::before {
+  border-color: var(--color-quinary);
+}
+
+@media (min-width: 37em) {
+  .frame::before {
+    top: -0.5rem;
+    left: -0.5rem;
+    border-width: 0.25rem;
+  }
+}

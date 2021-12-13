@@ -1,5 +1,10 @@
+const path = require('path')
+
 module.exports = ({
   pageExtensions: ["jsx", "tsx"],
+	sassOptions: {
+		includePaths: [path.join(__dirname, 'styles')],
+	},
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     config.module.rules.push(
       ...[

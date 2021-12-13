@@ -1,0 +1,9 @@
+.pagination__inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.pagination__inner > [data-direction="forwards"] {
+  margin-inline-start: auto;
+}
