@@ -9,9 +9,9 @@ import PageHeader from "../sections/PageHeader";
 export default function Contact() {
   return (
     <Layout>
-      <BasicMeta url={"/"} />
-      <OpenGraphMeta url={"/"} />
-      <TwitterCardMeta url={"/"} />
+      <BasicMeta url={"/contact"} />
+      <OpenGraphMeta url={"/contact"} />
+      <TwitterCardMeta url={"/contact"} />
 			<article>
 				<PageHeader title={'Contact'} />
 				<div className="panel dot-shadow bg-tertiary-glare">
