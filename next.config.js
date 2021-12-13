@@ -6,9 +6,6 @@ module.exports = withImages({
 	sassOptions: {
 		includePaths: [path.join(__dirname, 'styles')],
 	},
-	images: {
-    formats: ['image/gif'],
-  },
 	exportPathMap: async function (
     defaultPathMap,
     { dev, dir, outDir, distDir, buildId }
