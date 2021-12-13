@@ -22,10 +22,11 @@ const Intro = () => {
 					</Link>
 				</div>
 				<div className="[ intro__media ] [ radius dot-shadow ]">
-					<img
+					<Image
 						className="[ intro__image ] [ radius ]"
 						src="/images/intro.gif"
 						alt="Buttered toasted white bread"
+						layout="fill"
 					/>
 					{/* <Image className="[ intro__image ] [ radius ]" src="/images/bg/toast.jpg" alt="Buttered toasted white bread" layout="fill" /> */}
 				</div>
