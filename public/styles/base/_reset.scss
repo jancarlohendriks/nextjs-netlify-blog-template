@@ -1,0 +1,111 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+ol[class],
+ul[class] {
+  padding: 0;
+  list-style: none;
+}
+
+blockquote,
+body,
+dd,
+dl,
+figure,
+h1,
+h2,
+h3,
+h4,
+ol[class],
+p,
+ul[class] {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+  text-decoration-color: var(--color-quinary);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 10ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 10ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  --flow-space: 1.77rem;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  background: var(--color-light);
+  color: var(--color-dark-shade);
+  line-height: 1.5;
+  font-size: 1.33rem;
+  font-family: var(--font-body), Georgia, serif;
+}
+
+:focus {
+  outline: var(--color-primary) dashed 2px;
+  outline-offset: 0.25rem;
+}
+
+main:focus {
+  outline: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 900;
+  font-family: var(--font-heading), "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    sans-serif;
+  line-height: 1.1;
+}
+
+::selection {
+  color: var(--color-light);
+  background: rgba($color-dark-shade, 0.99);
+}
+
+::-webkit-scrollbar {
+	width: .75rem;
+  height: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border: 1px solid var(--color-dark-glare);
+  // border-radius: 0.25rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-dark-shade);
+  // border-radius: 0.25rem;
+}

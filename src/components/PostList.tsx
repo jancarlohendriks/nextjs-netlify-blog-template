@@ -5,7 +5,10 @@ import TagLink from "./TagLink";
 import Pagination from "./Pagination";
 import { TagContent } from "../lib/tags";
 
+import PageHeader from "../sections/PageHeader";
+
 type Props = {
+	title: string;
   posts: PostContent[];
   tags: TagContent[];
   pagination: {
@@ -13,72 +16,82 @@ type Props = {
     pages: number;
   };
 };
-export default function PostList({ posts, tags, pagination }: Props) {
+export default function PostList({ title='', posts=[], tags=[], pagination=null }: Props) {
   return (
-    <div className={"container"}>
-      <div className={"posts"}>
-        <ul className={"post-list"}>
-          {posts.map((it, i) => (
-            <li key={i}>
-              <PostItem post={it} />
-            </li>
-          ))}
-        </ul>
-        <Pagination
-          current={pagination.current}
-          pages={pagination.pages}
-          link={{
-            href: (page) => (page === 1 ? "/posts" : "/posts/page/[page]"),
-            as: (page) => (page === 1 ? null : "/posts/page/" + page),
-          }}
-        />
-      </div>
-      <ul className={"categories"}>
-        {tags.map((it, i) => (
-          <li key={i}>
-            <TagLink tag={it} />
-          </li>
-        ))}
-      </ul>
-      <style jsx>{`
-        .container {
-          display: flex;
-          margin: 0 auto;
-          max-width: 1200px;
-          width: 100%;
-          padding: 0 1.5rem;
-        }
-        ul {
-          margin: 0;
-          padding: 0;
-        }
-        li {
-          list-style: none;
-        }
-        .posts {
-          display: flex;
-          flex-direction: column;
-          flex: 1 1 auto;
-        }
-        .posts li {
-          margin-bottom: 1.5rem;
-        }
-        .post-list {
-          flex: 1 0 auto;
-        }
-        .categories {
-          display: none;
-        }
-        .categories li {
-          margin-bottom: 0.75em;
-        }
+		<article>
+			<PageHeader title={title} body={''} />
+			
+			{/* <section>
+				<ul className={"categories"}>
+					{tags.map((it, i) => (
+						<li key={i}>
+							<TagLink tag={it} />
+						</li>
+					))}
+				</ul>
+			</section> */}
+			
+			<div className="[ dot-shadow panel ] [ bg-secondary-glare ]" id="post-list">
+				<div className="[ wrapper ] [ flow flow-space-700 ]">
+					<div>
+						<ol className="[ post-list ] [ flow ]">
+							{posts.map((it, i) => (
+								<li key={i} className="[ post-list__item ] [ leading-tight measure-long ]">
+									<PostItem post={it} />
+								</li>
+							))}
+						</ol>
+					</div>
+				</div>
+			</div>
 
-        @media (min-width: 769px) {
-          .categories {
-            display: block;
-          }
-        }
-      `}</style>
-    </div>
+			<section className="[ panel ] [ flow flow-space-300 ]">
+				<div className="[ wrapper ]">
+					{/* <h3>Sort by tags</h3> */}
+					<nav className={"categories"}>
+						{tags.map((it, i) => (
+							<span>
+								<TagLink tag={it} /> &nbsp;
+							</span>
+						))}
+					</nav>
+				</div>
+			</section>
+			
+			<Pagination
+				current={pagination.current}
+				pages={pagination.pages}
+				link={{
+					href: (page) => (page === 1 ? "/posts" : "/posts/page/[page]"),
+					as: (page) => (page === 1 ? null : "/posts/page/" + page),
+				}}
+			/>
+		</article>
+    // <div className={"container"}>
+    //   <div className={"posts"}>
+    //     <ul className={"post-list"}>
+    //       {posts.map((it, i) => (
+    //         <li key={i}>
+    //           <PostItem post={it} />
+    //         </li>
+    //       ))}
+    //     </ul>
+    //     <Pagination
+    //       current={pagination.current}
+    //       pages={pagination.pages}
+    //       link={{
+    //         href: (page) => (page === 1 ? "/posts" : "/posts/page/[page]"),
+    //         as: (page) => (page === 1 ? null : "/posts/page/" + page),
+    //       }}
+    //     />
+    //   </div>
+    //   <ul className={"categories"}>
+    //     {tags.map((it, i) => (
+    //       <li key={i}>
+    //         <TagLink tag={it} />
+    //       </li>
+    //     ))}
+    //   </ul>
+    // </div>
   );
 }

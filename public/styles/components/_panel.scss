@@ -1,0 +1,11 @@
+.panel {
+  margin: 2.36rem 0;
+  padding: 2.36rem 0;
+}
+
+@media (min-width: 37em) {
+  .panel {
+    margin: 3.15rem 0;
+    padding: 3.15rem 0;
+  }
+}

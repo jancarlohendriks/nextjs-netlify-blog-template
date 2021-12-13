@@ -1,91 +1,39 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import Burger from "./Burger";
-import { useState } from "react";
 
 export default function Navigation() {
   const router = useRouter();
-  const [active, setActive] = useState(false);
   return (
     <>
-      <Burger active={active} onClick={() => setActive(!active)} />
-      <div className={"container " + (active ? "active" : "")}>
-        <ul>
-          <li>
-            <Link href="/">
-              <a className={router.pathname === "/" ? "active" : null}>home</a>
-            </Link>
-          </li>
-					<li>
-            <Link href="/posts">
-              <a className={ router.pathname.startsWith("/posts") ? "active" : null } >portfolio</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/read-me">
-              <a className={ router.pathname.startsWith("/read-me") ? "active" : null } >read me</a>
-            </Link>
-          </li>
-        </ul>
-        <style jsx>
-          {`
-            .container {
-              width: 0;
-            }
-            ul {
-              opacity: 0;
-              width: 100%;
-              height: 100vh;
-              text-align: right;
-              list-style: none;
-              margin: 0;
-              padding: 0;
-              position: fixed;
-              top: 0;
-              background-color: #fff;
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              z-index: 1;
-              transform: translateY(100%);
-              transition: opacity 200ms;
-            }
-            .active ul {
-              opacity: 1;
-              transform: translateY(0);
-            }
-            li {
-              margin-bottom: 1.75rem;
-              font-size: 2rem;
-              padding: 0 1.5rem 0 0;
-            }
-            li:last-child {
-              margin-bottom: 0;
-            }
-            .active {
-              color: #222;
-            }
-
-            @media (min-width: 769px) {
-              .container {
-                width: 7rem;
-                display: block;
-              }
-              ul {
-                opacity: 1;
-                width: 7rem;
-                top: auto;
-                display: block;
-                transform: translateY(0);
-              }
-              li {
-                font-size: 1rem;
-                padding: 0;
-              }
-            }
-          `}
-        </style>
-      </div>
+			<a className="[ skip-link ] [ button ]" href="#main-content">Skip to content</a>
+			<header role="banner" className="site-head">
+				<div className="wrapper">
+					<div className="site-head__inner">
+						{/* <a href="/" aria-label="Jan Carlo" className="site-head__brand">
+							Jan Carlo
+						</a> */}
+						<nav className="[ nav ] [ site-head__nav ] [ font-sans ]" aria-label="Primary navigaton">
+							<ul className="nav__list">
+								<li>
+									<Link href="/">
+										<a aria-current={router.pathname === "/" ? "page" : null}>Home</a>
+									</Link>
+								</li>
+								<li>
+									<Link href="/posts/read-me">
+										<a aria-current={router.query.post === "read-me" ? "page" : null}>Reading Guide</a>
+									</Link>
+								</li>
+								<li>
+									<Link href="/posts">
+										<a aria-current={router.pathname === "/posts" ? "page" : null}>Portfolio</a>
+									</Link>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</header>
     </>
   );
 }
