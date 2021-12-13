@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import introPic from '../../public/images/intro.gif'
+// import introPic from '../../public/images/intro.gif'
 
 const Intro = () => {
 	return (
