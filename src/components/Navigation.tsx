@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 
 export default function Navigation() {
   const router = useRouter();
+	console.log(router);
   return (
     <>
 			<a className="[ skip-link ] [ button ]" href="#main-content">Skip to content</a>
