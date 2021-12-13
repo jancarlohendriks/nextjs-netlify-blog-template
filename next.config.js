@@ -1,10 +1,14 @@
 const path = require('path')
+const withImages = require('next-images')
 
-module.exports = ({
+module.exports = withImages({
   pageExtensions: ["jsx", "tsx"],
 	sassOptions: {
 		includePaths: [path.join(__dirname, 'styles')],
 	},
+	images: {
+    formats: ['image/gif'],
+  },
 	exportPathMap: async function (
     defaultPathMap,
     { dev, dir, outDir, distDir, buildId }
