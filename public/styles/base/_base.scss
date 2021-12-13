@@ -1,8 +1,0 @@
-@use "sass:meta";
-@use "./variables";
-
-:root {
-  @each $name, $value in meta.module-variables("variables") {
-    --#{$name}: #{$value};
-  }
-}

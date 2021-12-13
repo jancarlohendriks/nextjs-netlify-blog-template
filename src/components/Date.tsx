@@ -5,16 +5,15 @@ type Props = {
 };
 export default function Date({ date }: Props) {
   return (
-		<time dateTime={date.toDateString()}>{format(date, "LLLL d, yyyy")}</time>
-    // <time dateTime={formatISO(date)}>
-    //   <span>{format(date, "LLLL d, yyyy")}</span>
-    //   <style jsx>
-    //     {`
-    //       span {
-    //         color: #9b9b9b;
-    //       }
-    //     `}
-    //   </style>
-    // </time>
+    <time dateTime={formatISO(date)}>
+      <span>{format(date, "LLLL d, yyyy")}</span>
+      <style jsx>
+        {`
+          span {
+            color: #9b9b9b;
+          }
+        `}
+      </style>
+    </time>
   );
 }

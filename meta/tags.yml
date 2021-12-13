@@ -1,25 +1,13 @@
 tags:
-  # - slug: document
-  #   name: document
-  # - slug: mock
-  #   name: mock
-  # - slug: style
-  #   name: style
-  # - slug: license
-  #   name: license
-  # - slug: mdx
-  #   name: mdx
-  # - slug: markdown
-  #   name: markdown
-  - slug: analysis
-    name: analysis
-  - slug: advise
-    name: advise
-  - slug: design
-    name: design
-  - slug: realisation
-    name: realisation
-  - slug: management
-    name: management
-  - slug: professional
-    name: professional
+  - slug: document
+    name: document
+  - slug: mock
+    name: mock
+  - slug: style
+    name: style
+  - slug: license
+    name: license
+  - slug: mdx
+    name: mdx
+  - slug: markdown
+    name: markdown

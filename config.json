@@ -1,19 +1,19 @@
 {
-	"base_url": "https://jchendriks-s5.netlify.app",
-	"site_title": "Jan Carlo Hendriks",
-	"site_description": "2021 Media Student Portfolio",
-	"site_keywords": [
-		{
-			"keyword": "Next.js"
-		},
-		{
-			"keyword": "Netlify"
-		},
-		{
-			"keyword": "React"
-		}
-	],
-	"posts_per_page": 10,
-	"twitter_account": "jancarlohendriks",
-	"github_account": "jancarlohendriks"
+  "base_url": "https://jchendriks-s5.netlify.app",
+  "site_title": "Jan Carlo Hendriks",
+  "site_description": "2021 Media Student Portfolio",
+  "site_keywords": [
+    {
+      "keyword": "Next.js"
+    },
+    {
+      "keyword": "Netlify"
+    },
+    {
+      "keyword": "React"
+    }
+  ],
+  "posts_per_page": 5,
+  "twitter_account": "jancarlohendriks",
+  "github_account": "jancarlohendriks"
 }
