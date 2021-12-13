@@ -21,7 +21,7 @@ export default function Navigation() {
 								</li>
 								<li>
 									<Link href="/posts/read-me">
-										<a aria-current={router.query.post === "read-me" ? "page" : null}>Reading Guide</a>
+										<a aria-current={router.asPath === "/posts/read-me" ? "page" : null}>Reading Guide</a>
 									</Link>
 								</li>
 								<li>
