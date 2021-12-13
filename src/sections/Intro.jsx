@@ -23,11 +23,11 @@ const Intro = () => {
 					</Link>
 				</div>
 				<div className="[ intro__media ] [ radius dot-shadow ]">
-					<img
+					<Image
 						className="[ intro__image ] [ radius ]"
 						src={introPic}
 						alt="Intro Picture"
-						// layout="fill"
+						layout="fill"
 					/>
 					{/* <img
 						className="[ intro__image ] [ radius ]"
