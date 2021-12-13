@@ -50,7 +50,7 @@ export default function PostList({ title='', posts=[], tags=[], pagination=null 
 					{/* <h3>Sort by tags</h3> */}
 					<nav className={"categories"}>
 						{tags.map((it, i) => (
-							<span>
+							<span key={i}>
 								<TagLink tag={it} /> &nbsp;
 							</span>
 						))}
