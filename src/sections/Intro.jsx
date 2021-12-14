@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
 
 const Intro = () => {
 	return (
@@ -22,12 +22,12 @@ const Intro = () => {
 					</Link>
 				</div>
 				<div className="[ intro__media ] [ radius dot-shadow ]">
-					<Image
+					{/* <Image
 						className="[ intro__image ] [ radius ]"
 						src="/images/giphy.webp"
 						alt="Buttered toasted white bread"
 						layout="fill"
-					/>
+					/> */}
 					{/* <Image className="[ intro__image ] [ radius ]" src="/images/bg/toast.jpg" alt="Buttered toasted white bread" layout="fill" /> */}
 				</div>
 			</article>
