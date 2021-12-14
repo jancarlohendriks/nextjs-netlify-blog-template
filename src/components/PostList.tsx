@@ -19,7 +19,7 @@ type Props = {
 export default function PostList({ title='', posts=[], tags=[], pagination=null }: Props) {
   return (
 		<article>
-			<PageHeader title={title} body={''} />
+			<PageHeader title={title} tags={tags.map(x => x.slug)} body={''} />
 			
 			{/* <section>
 				<ul className={"categories"}>
@@ -45,9 +45,8 @@ export default function PostList({ title='', posts=[], tags=[], pagination=null 
 				</div>
 			</div>
 
-			<section className="[ panel ] [ flow flow-space-300 ]">
+			{/* <section className="[ panel ] [ flow flow-space-300 ]">
 				<div className="[ wrapper ]">
-					{/* <h3>Sort by tags</h3> */}
 					<nav className={"categories"}>
 						{tags.map((it, i) => (
 							<span key={i}>
@@ -56,7 +55,7 @@ export default function PostList({ title='', posts=[], tags=[], pagination=null 
 						))}
 					</nav>
 				</div>
-			</section>
+			</section> */}
 			
 			<Pagination
 				current={pagination.current}
