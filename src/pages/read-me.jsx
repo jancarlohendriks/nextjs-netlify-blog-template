@@ -13,7 +13,7 @@ export default function Index() {
       <div className="container">
         <div>
           <h1>
-            Jan Carlo Hendriks<span className="fancy">.</span>
+            READ ME
           </h1>
           <span className="handle">@jancarlohendriks</span>
           <h2>2021 Media Design Student Portfolio</h2>

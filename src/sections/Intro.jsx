@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-// import introPic from '../../public/images/intro.gif'
 
 const Intro = () => {
 	return (
@@ -23,17 +22,12 @@ const Intro = () => {
 					</Link>
 				</div>
 				<div className="[ intro__media ] [ radius dot-shadow ]">
-					{/* <Image
+					<Image
 						className="[ intro__image ] [ radius ]"
-						src={introPic}
-						alt="Intro Picture"
-						layout="fill"
-					/> */}
-					{/* <img
-						className="[ intro__image ] [ radius ]"
-						src="/images/intro.gif"
+						src="/images/giphy.webp"
 						alt="Buttered toasted white bread"
-					/> */}
+						layout="fill"
+					/>
 					{/* <Image className="[ intro__image ] [ radius ]" src="/images/bg/toast.jpg" alt="Buttered toasted white bread" layout="fill" /> */}
 				</div>
 			</article>
