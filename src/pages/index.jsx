@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
 import Layout from "../components/Layout";
 import BasicMeta from "../components/meta/BasicMeta";
 import OpenGraphMeta from "../components/meta/OpenGraphMeta";
@@ -7,9 +7,6 @@ import TwitterCardMeta from "../components/meta/TwitterCardMeta";
 import { SocialList } from "../components/SocialList";
 
 import Intro from "../sections/Intro";
-import Cta from "../sections/Cta";
-import FeaturedWork from "../sections/FeaturedWork";
-import StudioFeed from "../sections/StudioFeed";
 
 export default function Index() {
   return (
