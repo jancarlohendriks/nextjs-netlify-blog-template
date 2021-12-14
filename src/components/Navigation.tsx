@@ -20,11 +20,11 @@ export default function Navigation() {
 										<a aria-current={router.pathname === "/" ? "page" : null}>Home</a>
 									</Link>
 								</li>
-								<li>
+								{/* <li>
 									<Link href="/posts/read-me">
 										<a aria-current={router.pathname === "/posts/read-me" ? "page" : null}>Reading Guide</a>
 									</Link>
-								</li>
+								</li> */}
 								<li>
 									<Link href="/posts">
 										<a aria-current={router.pathname === "/posts" ? "page" : null}>Portfolio</a>
