@@ -3,7 +3,7 @@
 .page-content table {
   width: 100%;
   border-spacing: 0;
-  margin-top: 1.5rem;
+  // margin-top: 1.5rem;
 }
 
 .page-content table thead {
@@ -12,6 +12,15 @@
 
 .page-content table th {
   font-weight: 500;
+}
+
+.page-content table tr:nth-child(odd) {
+	background-color: rgba($color-dark-glare, .25);
+}
+
+.page-content table tr:nth-child(1) {
+	color: #fff;
+	background-color: rgba($color-dark-shade, 1);
 }
 
 .page-content table {

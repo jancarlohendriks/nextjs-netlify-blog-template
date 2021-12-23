@@ -109,3 +109,14 @@ h4 {
   background-color: var(--color-dark-shade);
   // border-radius: 0.25rem;
 }
+
+hr {
+	--flow-space: 8rem;
+	margin: var(--flow-space, 8rem) 0;
+}
+
+iframe {
+	border: 3px solid black;
+	width: 100%;
+	height: 21vw;
+}
