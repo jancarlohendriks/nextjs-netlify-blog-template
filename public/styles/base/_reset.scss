@@ -115,6 +115,10 @@ hr {
 	margin: var(--flow-space, 8rem) 0;
 }
 
+.page-content img {
+	border: 3px solid black;
+}
+
 iframe {
 	border: 3px solid black;
 	width: 100%;
