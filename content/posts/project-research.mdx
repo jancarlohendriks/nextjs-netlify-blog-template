@@ -1,0 +1,676 @@
+---
+slug: project-research
+title: Project Research
+date: 2021-12-23
+author: jancarlo
+tags:
+  - document
+---
+# Project Research
+
+After the design challenge was clear, which you can find in my Project Plan (v1), I started to dig down into research, exploratory research to be more precise.
+
+I went to look at what the guidelines are, which tools already exist and what are the best practices, and in general get more acquainted with the Web Accessibility world since this was a first timer for me. Hereafter I decided to update my Project Plan (v2) where the research questions and methods are more clearly defined.
+
+Below you can find a more detailed chart picturing this process.
+
+
+## Exploratory Research (Literature Study)
+
+
+### Guidelines
+
+After my first meeting with the company CTO, I pulled the official [WebAIM checklist](https://webaim.org/standards/wcag/checklist), one of the major Web Accessibility consultants in the world, if not the biggest. This list group’s all of the 78 official WCAG accessibility success criteria. I then proceeded to categorize and filter these guidelines depending on their degree of difficulty and in terms of real application to our current projects, the main criteria was time.
+
+
+
+
+### Existing Tools
+
+Furthermore, I went on with my research and looked for the tools available in the market. As expected, there were thousands, each with their unique pro’s and cons’. Therefore, I decided to focus on the ones that were useful for the company, and followed the advice of some articles listing the most useful tools.
+
+
+
+[Official Web Consortium Accessibility tools list](https://www.w3.org/WAI/ER/tools/?q=wcag-21-w3c-web-content-accessibility-guidelines-21)
+
+[5 Website Accessibility Checkers You Need Today](https://www.mediacurrent.com/blog/5-website-accessibility-checkers) (article)
+
+[Manual Test](https://www.mediacurrent.com/blog/manual-accessibility-testing-why-how) (article)
+
+
+<table>
+  <tr>
+   <td>Accessibility Checkers
+   </td>
+   <td>Review
+   </td>
+  </tr>
+  <tr>
+   <td>WAVE: Website Accessibility Evaluation Tool
+   </td>
+   <td>Works online
+<p>
+Only one page at the time
+   </td>
+  </tr>
+  <tr>
+   <td>SortSite
+   </td>
+   <td>Works online
+<p>
+Whole website on:
+<ul>
+
+<li>Errors
+
+<li>Accessibility
+
+<li>Compatibility
+
+<li>Search
+
+<li>Standards
+
+<li>Usability
+
+<p>
+Clear overview of accessibility issues grouped by priority levels
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td>aXe: The Accessibility Engine
+   </td>
+   <td>Works in the DevTools Inspector \
+Tests whole website
+<p>
+Not so clear
+   </td>
+  </tr>
+  <tr>
+   <td>Pa11y
+   </td>
+   <td>Npm package
+   </td>
+  </tr>
+  <tr>
+   <td>Tota11y
+   </td>
+   <td>JavaScript file that inserts a small button in the bottom corner of your document
+   </td>
+  </tr>
+</table>
+
+
+The clear winner was SorSite since it over delivered in all aspects. It works on the web, so no installation is needed, it checks not only one page but all the pages belonging to the same website which saves an incredible amount of time and displays a very clear overview of all the issues found in a nice report.
+
+
+## Decision making (Analysis)
+
+After my initial research was concluded, I met again with the company CTO to review the results and define next steps.
+
+Some feedback I got:
+
+
+
+* Use the 80/20 rule → biggest output with least amount of input
+* Zoom out of the project scope into a bigger vision/impact (not only focus in one client, but rather into a solution that is applicable to various clients)
+
+In my research I also found that It is estimated that around 15 percent of the world’s population live with some sort of disability. So the logical formula would be:
+
+more visitors === most probability of visitors with some disability
+
+Luckily, this is a number Bravoure possesses because they use Google Analytics.
+
+The plan after having the target websites was clear:
+
+
+
+* Run Automated Checks (use the Sortsite Tool)
+* Run Manual Tests
+
+80/20 → Summarize things in common → frame project → step-by-step plan → action.
+
+
+## Clients With Most Visitors
+
+Looking into all the data I came up with the following list. Because of privacy reasons I cannot display the actual visitor numbers of these clients.
+
+
+<table>
+  <tr>
+   <td>2016-2017
+   </td>
+  </tr>
+  <tr>
+   <td>
+    PARADISO
+   </td>
+  </tr>
+  <tr>
+   <td>
+    ADE
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CHANGE
+   </td>
+  </tr>
+  <tr>
+   <td>
+    AWAKENINGS
+   </td>
+  </tr>
+  <tr>
+   <td>
+    EYE
+   </td>
+  </tr>
+  <tr>
+   <td>
+    BKS
+   </td>
+  </tr>
+  <tr>
+   <td>
+    ITA
+   </td>
+  </tr>
+  <tr>
+   <td>
+    EBBINGE
+   </td>
+  </tr>
+</table>
+
+
+
+<table>
+  <tr>
+   <td>2020-2021
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CHANGE
+   </td>
+  </tr>
+  <tr>
+   <td>
+    PARADISO
+   </td>
+  </tr>
+  <tr>
+   <td>
+    ADE
+   </td>
+  </tr>
+  <tr>
+   <td>
+    ITA
+   </td>
+  </tr>
+  <tr>
+   <td>
+    EYE
+   </td>
+  </tr>
+  <tr>
+   <td>
+    AWAKENINGS
+   </td>
+  </tr>
+  <tr>
+   <td>
+    EBBINGE
+   </td>
+  </tr>
+  <tr>
+   <td>
+    BKS
+   </td>
+  </tr>
+</table>
+
+
+I also wanted to look into the numbers before the pandemic to see if there was a correlation. Although the numbers for 2020-2021 are way lower than previously, the top 3 remain the same. The reason behind could also be that all the clients have been equally affected.
+
+
+## Automated Accessibility Test
+
+
+
+Since a lot of the problems in Web Accessibility can be found in the semantics used to build web applications, automated tools can scan all the code and bring back a list of all the errors found. Following my previous research I decided to use SortSite since it didn't require me to install any program and works fine on the web. Also, the trial and premium version scan all the pages of the same website, while most other tools don’t.
+
+[SortSite’s PowerMapper tool](https://try.powermapper.com/demo/sortsite)
+
+I ran the test on the 3 most visited client’s websites and created a pivot table, where the matching errors could be found. The following are the errors matched:
+
+
+
+* Avoid specifying a new window as the target of a link with target=_blank.
+* Don't use CSS animations or transitions in interactions without giving the user a way to turn them off.
+* Duplicate id - the same ID is used on more than one element.
+* Each &lt;a> element must contain text or an img with an alt attribute.
+* Ensure that text and background colors have a 7:1 contrast ratio.
+* Ensure that text and background colors have enough contrast.
+* Headings should not be empty.
+* HTML form control has no accessible name.
+* iframe and frame elements must have a title attribute.
+* Link uses general text like 'Click Here' with no surrounding text explaining link purpose.
+* Several links on a page share the same link text, but go to different destinations.
+* The CSS outline or border style on this element makes it difficult or impossible to see the dotted link focus outline.
+
+
+## Manual Accessibility Test
+
+Next to the automated test, I also decided to run a manual test in case there was any issue not found yet. To do so I followed the following article, [Manual Accessibility Testing: Why & How](https://www.mediacurrent.com/blog/manual-accessibility-testing-why-how).
+
+The results can be found in the following matrix, where all 3 websites fail in most of the tests.
+
+
+<table>
+  <tr>
+   <td colspan="2" >TEST
+   </td>
+   <td>ADE
+   </td>
+   <td>CHANGE
+   </td>
+   <td>EYE
+   </td>
+  </tr>
+  <tr>
+   <td rowspan="4" >Keyboard Only Navigation
+   </td>
+   <td>Do you have a “skip to main content” link at the top of the page, before your navigation? This prevents users from having to go through your entire navigation over and over again just to get to the main content of your page.
+   </td>
+   <td>No
+   </td>
+   <td>No
+   </td>
+   <td>No
+   </td>
+  </tr>
+  <tr>
+   <td>Are your menus/mega-menus navigable? Some menus are not accessible without a mouse.
+   </td>
+   <td>No
+   </td>
+   <td>No
+   </td>
+   <td>Yes
+   </td>
+  </tr>
+  <tr>
+   <td>Are you able to access the different sections of your page with only a keyboard? Don’t let your users miss out on valuable content!
+   </td>
+   <td>No
+   </td>
+   <td>No
+   </td>
+   <td>No
+   </td>
+  </tr>
+  <tr>
+   <td>Are links and form fields brought into focus (meaning do you see an outline around links and do you see a cursor in form fields)?
+   </td>
+   <td>Yes
+   </td>
+   <td>Yes
+   </td>
+   <td>No
+   </td>
+  </tr>
+  <tr>
+   <td rowspan="5" >Test with a<a href="https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en"> Screen Reader</a>
+   </td>
+   <td>When announcing the link to home typically associated with the logo on the site - are you able to tell where the link directs you from what it is being said? What about other links: does what is read to you give context as to where it will lead?
+   </td>
+   <td>No
+   </td>
+   <td>No
+   </td>
+   <td>No
+   </td>
+  </tr>
+  <tr>
+   <td>If there is more than one menu, are you able to tell which menu you are on and what link you are on within that menu?
+   </td>
+   <td>No
+   </td>
+   <td>Yes
+   </td>
+   <td>No
+   </td>
+  </tr>
+  <tr>
+   <td>For all forms, are you able to tell what information is expected of you when you are asked to input text (i.e. does it speak something like “enter search terms”)
+   </td>
+   <td>No
+   </td>
+   <td>Yes
+   </td>
+   <td>Yes
+   </td>
+  </tr>
+  <tr>
+   <td>Is all of the on-page content read to you?
+   </td>
+   <td>No
+   </td>
+   <td>No
+   </td>
+   <td>No
+   </td>
+  </tr>
+  <tr>
+   <td>Does the alternative text of an image give appropriate context as to what the image is about/its value to the overall story?
+   </td>
+   <td>No
+   </td>
+   <td>No
+   </td>
+   <td>Yes
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://webaim.org/resources/contrastchecker/">Double Check Your Colors</a>
+   </td>
+   <td>Either using browser tools or testing screen shots in a program such as Photoshop, grab the foreground and background colors.
+<p>
+Enter these into the respective fields on the Color Contrast Checker webpage
+<p>
+Look at the font size in question and determine if it is a pass or fail
+   </td>
+   <td>No
+   </td>
+   <td>No
+   </td>
+   <td>No
+   </td>
+  </tr>
+</table>
+
+
+
+
+I also run a manual test on the most popular pages of each website.
+
+
+
+
+<table>
+  <tr>
+   <td>SITE
+   </td>
+   <td>PAGE
+   </td>
+   <td>PROBLEM
+   </td>
+   <td>PRIO
+   </td>
+  </tr>
+  <tr>
+   <td rowspan="7" >ADE
+   </td>
+   <td rowspan="2" >/en/program/
+   </td>
+   <td>(slider) images no ALT
+   </td>
+   <td>Low
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://www.w3.org/TR/2017/NOTE-wai-aria-practices-1.1-20171214/examples/landmarks/region.html">section region title</a>
+   </td>
+   <td>Low
+   </td>
+  </tr>
+  <tr>
+   <td rowspan="3" >/en/about/
+   </td>
+   <td><a href="https://www.w3.org/TR/wai-aria-practices-1.1/examples/accordion/accordion.html">accordion:</a>
+<p>
+- no focus state
+<p>
+- not machine readable
+   </td>
+   <td>High
+   </td>
+  </tr>
+  <tr>
+   <td>images no ALT
+   </td>
+   <td>Low
+   </td>
+  </tr>
+  <tr>
+   <td>image video no description & no focus styling
+   </td>
+   <td>Low
+   </td>
+  </tr>
+  <tr>
+   <td>/en/news/
+   </td>
+   <td>images no ALT
+   </td>
+   <td>Low
+   </td>
+  </tr>
+  <tr>
+   <td>/en/faq-and-contact/
+   </td>
+   <td><a href="https://www.w3.org/TR/wai-aria-practices-1.1/examples/accordion/accordion.html">accordion:</a>
+<p>
+- no focus state
+<p>
+- not machine readable
+   </td>
+   <td>High
+   </td>
+  </tr>
+  <tr>
+   <td rowspan="12" >EYE
+   </td>
+   <td rowspan="2" >/nl/whats-on
+   </td>
+   <td>program list item has 2 links, screen reader reads twice
+   </td>
+   <td>Medium
+   </td>
+  </tr>
+  <tr>
+   <td>filter navigation appears after scrolling, dropdown not accessible
+   </td>
+   <td>High
+   </td>
+  </tr>
+  <tr>
+   <td rowspan="3" >/nl/whats-on/alle-films
+   </td>
+   <td>images no ALT
+   </td>
+   <td>Low
+   </td>
+  </tr>
+  <tr>
+   <td>focus on menu items while menu is not open
+   </td>
+   <td>Medium
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://www.w3.org/TR/2017/NOTE-wai-aria-practices-1.1-20171214/examples/landmarks/region.html">section region title</a>
+   </td>
+   <td>Low
+   </td>
+  </tr>
+  <tr>
+   <td rowspan="4" >/nl/plan-je-bezoek
+   </td>
+   <td>section region title
+   </td>
+   <td>Low
+   </td>
+  </tr>
+  <tr>
+   <td>FAQ accordion
+   </td>
+   <td>High
+   </td>
+  </tr>
+  <tr>
+   <td>Download PDF link no context
+   </td>
+   <td>Medium
+   </td>
+  </tr>
+  <tr>
+   <td>newsletter privacy disclaimer checkbox
+   </td>
+   <td>Low
+   </td>
+  </tr>
+  <tr>
+   <td rowspan="3" >/nl/restaurant
+   </td>
+   <td>section region title
+   </td>
+   <td>Low
+   </td>
+  </tr>
+  <tr>
+   <td>accordion
+   </td>
+   <td>High
+   </td>
+  </tr>
+  <tr>
+   <td>tickets widget
+   </td>
+   <td>High
+   </td>
+  </tr>
+  <tr>
+   <td rowspan="5" >CHANGE
+   </td>
+   <td rowspan="2" >/duurzaam-nieuws
+   </td>
+   <td>news card item title
+   </td>
+   <td>Low
+   </td>
+  </tr>
+  <tr>
+   <td>pagination number + arrows
+   </td>
+   <td>Low
+   </td>
+  </tr>
+  <tr>
+   <td>/changemakers/willem-smelik
+   </td>
+   <td>-
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>/future-leadership/blog-op-naar-glasgow-voor-de-vn-klimaatconferentie-cop26-37276
+   </td>
+   <td>-
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>/finance/actiam-stapte-voor-zwitserleven-na-jaren-van-investeren-uit-shell-zwitserleven-directeur-hans-visser-legt-uit-waarom-37287
+   </td>
+   <td>-
+   </td>
+   <td>
+   </td>
+  </tr>
+</table>
+
+
+
+
+
+## Conclusion
+
+Having done all this research and analysis a lot of data, I bundled together a list of problems which are higher in priority from an accessibility point of view.
+
+In general, I found that all websites fail in the following criteria:
+
+
+
+
+<table>
+  <tr>
+   <td>Problem
+   </td>
+   <td>Priority
+   </td>
+  </tr>
+  <tr>
+   <td>Website navigation
+   </td>
+   <td>Critical
+   </td>
+  </tr>
+  <tr>
+   <td>Content readability
+   </td>
+   <td>High
+   </td>
+  </tr>
+  <tr>
+   <td>Contrast Ratio
+   </td>
+   <td>Low
+   </td>
+  </tr>
+</table>
+
+
+Also, the most common components needing attention are the following, with a special attention to the accordion component.
+
+
+<table>
+  <tr>
+   <td>PROBLEM
+   </td>
+   <td>RELEVANCE
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://www.w3.org/TR/wai-aria-practices-1.1/examples/accordion/accordion.html">accordion:</a>
+<p>
+- no focus state
+<p>
+- not machine readable
+   </td>
+   <td>High
+   </td>
+  </tr>
+  <tr>
+   <td>filter navigation appears after scrolling, dropdown not accessible
+   </td>
+   <td>High
+   </td>
+  </tr>
+  <tr>
+   <td>tickets widget
+   </td>
+   <td>High
+   </td>
+  </tr>
+</table>
+
+
+All my findings and the solutions that I propose can be found in my Project Presentation’s post item.
