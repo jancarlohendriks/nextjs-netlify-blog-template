@@ -7,8 +7,7 @@ tags:
   - document
 manual_pdf: /images/0.4-accessibility-tools.pdf
 ---
-My favorite search engine is [Document](/images/0.4-accessibility-tools.pdf
-).
+<!-- My favorite search engine is [Document](/images/0.4-accessibility-tools.pdf). -->
 
 <p>
   After the design challenge was clear, which you can find in my Project Plan
@@ -32,8 +31,8 @@ My favorite search engine is [Document](/images/0.4-accessibility-tools.pdf
 <h2>Exploratory Research (Literature Study)</h2>
 
 <p>
-  After my first meeting with the company CTO, I pulled the official{" "}
-  <a href="https://webaim.org/standards/wcag/checklist&amp;sa=D&amp;source=editors&amp;ust=1640255009948000&amp;usg=AOvVaw1wQ5wQbkCza3WjuJ_gEe3i">
+  After my first meeting with the company CTO, I pulled the official
+  <a href="https://webaim.org/standards/wcag/checklist">
     WebAIM checklist
   </a>
   , one of the major Web Accessibility consultants in the world, if not the
@@ -45,33 +44,17 @@ My favorite search engine is [Document](/images/0.4-accessibility-tools.pdf
 <h3>Guidelines</h3>
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSs7ewAi0J6SDdZ9S0o5SwbqW54EEQr84oJERXE5ePrPYgu2ZAoLo0Ab0yNDu5AeJk4NHzD25ViY9zV/pubhtml?gid=7555876&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
 
+Later on, I reviewed these with the company CTO where he agreed with my results. The most affordable solutions where the ones that can be automated with HTML.
+
 <hr />
 
 <h3>Existing Tools</h3>
-<p>
-  Furthermore, I went on with my research and looked for the tools available in
-  the market. As expected, there were thousands, each with their unique
-  pro&rsquo;s and cons&rsquo;. Therefore, I decided to focus on the ones that
-  were useful for the company, and followed the advice of some articles listing
-  the most useful tools.
-</p>
-<p>
-  <a href="https://www.w3.org/WAI/ER/tools/?q%3Dwcag-21-w3c-web-content-accessibility-guidelines-21&amp;sa=D&amp;source=editors&amp;ust=1640255009949000&amp;usg=AOvVaw2q1iSkTXXwXFPDe6l8wZkc">
-    Official Web Consortium Accessibility tools list
-  </a>
-</p>
-<p>
-  <a href="https://www.mediacurrent.com/blog/5-website-accessibility-checkers&amp;sa=D&amp;source=editors&amp;ust=1640255009949000&amp;usg=AOvVaw0tniX7e9H9QZXPLXEI2uGY">
-    5 Website Accessibility Checkers You Need Today
-  </a>
-  &nbsp;(article)
-</p>
-<p>
-  <a href="https://www.mediacurrent.com/blog/manual-accessibility-testing-why-how&amp;sa=D&amp;source=editors&amp;ust=1640255009950000&amp;usg=AOvVaw2gTXiXIeLss4DqwaRrjEyN">
-    Manual Test
-  </a>
-  &nbsp;(article)
-</p>
+
+Furthermore, I went on with my research and looked for the tools available in
+the market. As expected, there were thousands, each with their unique
+pro&rsquo;s and cons&rsquo;. Therefore, I decided to focus on the ones that
+were useful for the company, and followed the advice of some articles listing
+the most useful tools. My preferred article and where I selected the tools are [here](https://www.mediacurrent.com/blog/5-website-accessibility-checkers), and the Official Web Consortium Accessibility tools list can be found [here](https://www.w3.org/WAI/ER/tools/?q%3Dwcag-21-w3c-web-content-accessibility-guidelines-21)
 
 <table>
   <tbody>
@@ -102,14 +85,14 @@ My favorite search engine is [Document](/images/0.4-accessibility-tools.pdf
         <ul>
           <li>Works online</li>
           <li>Whole website on:</li>
-        </ul>
-        <ul>
-          <li>Errors</li>
-          <li>Accessibility</li>
-          <li>Compatibility</li>
-          <li>Search</li>
-          <li>Standards</li>
-          <li>Usability</li>
+					<ul>
+						<li>Errors</li>
+						<li>Accessibility</li>
+						<li>Compatibility</li>
+						<li>Search</li>
+						<li>Standards</li>
+						<li>Usability</li>
+					</ul>
         </ul>
         <ul>
           <li>
@@ -125,8 +108,9 @@ My favorite search engine is [Document](/images/0.4-accessibility-tools.pdf
       <td colspan="1" rowspan="1">
         <ul>
           <li>Works in the DevTools Inspector</li>
-          <li>Tests whole website</li>
-          <li>Not so clear</li>
+          <li>Good for single page testing</li>
+          <li>Displays a detailed summary of errors</li>
+          <li>It requiers a more tedious kind of testing since it is not a global checker</li>
         </ul>
       </td>
     </tr>
@@ -135,7 +119,10 @@ My favorite search engine is [Document](/images/0.4-accessibility-tools.pdf
         <p>Pa11y</p>
       </td>
       <td colspan="1" rowspan="1">
-        <p>Npm package</p>
+				<ul>
+          <li>Npm package that creates a local dashboard with web accessiblity issues</li>
+					<li>Requires an installation for every project</li>
+        </ul>
       </td>
     </tr>
     <tr>
@@ -143,10 +130,10 @@ My favorite search engine is [Document](/images/0.4-accessibility-tools.pdf
         <p>Tota11y</p>
       </td>
       <td colspan="1" rowspan="1">
-        <p>
-          JavaScript file that inserts a small button in the bottom corner of
-          your document
-        </p>
+				<ul>
+          <li>JavaScript file that inserts a small button in the bottom corner of your document</li>
+					<li>It inspects a selected element and shows the accessiblity issues related to that element</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -158,6 +145,17 @@ My favorite search engine is [Document](/images/0.4-accessibility-tools.pdf
   time and displays a very clear overview of all the issues found in a nice
   report.
 </p>
+
+<hr />
+
+## Conclusions
+
+So far, I managed to explore and analayse the available solutions for Web Accessibility. Not only that, but also list down the requirements for Web Accesiblity, categorize them in order to know what is feasable for the company and also summarize the tools that can help us the most. With all this knowlegde I was ready to embark the next step and explore how I can implement it to real use cases within the company.
+
+In short, my findings can be summarized as follow:
+
+- The easiest accessiblity issues to tackle down are those that involve HTML and proper semantics (use of code).
+- Among the thousand of tools out there, SortSite provides the best solution to run a quick global automated test since it does not require any installation, can be run on the browser and provides a very clear and broad overview with information regarding the issues without the hassle of it being over bloated, making the information gathered quite comprehensive.
 
 <hr />
 
@@ -322,7 +320,7 @@ My favorite search engine is [Document](/images/0.4-accessibility-tools.pdf
   of the same website, while most other tools don&rsquo;t.
 </p>
 <p>
-  <a href="https://try.powermapper.com/demo/sortsite&amp;sa=D&amp;source=editors&amp;ust=1640255009963000&amp;usg=AOvVaw1wAqSNNPfSEwOnOPv7UCsA">
+  <a href="https://try.powermapper.com/demo/sortsite">
     SortSite&rsquo;s PowerMapper tool
   </a>
 </p>
@@ -368,8 +366,8 @@ My favorite search engine is [Document](/images/0.4-accessibility-tools.pdf
 <h2>Manual Accessibility Test</h2>
 <p>
   Next to the automated test, I also decided to run a manual test in case there
-  was any issue not found yet. To do so I followed the following article,{" "}
-  <a href="https://www.mediacurrent.com/blog/manual-accessibility-testing-why-how&amp;sa=D&amp;source=editors&amp;ust=1640255009964000&amp;usg=AOvVaw2FZsygXYjd-fvNDwW4ibR7">
+  was any issue not found yet. To do so I followed the following article:
+  <a href="https://www.mediacurrent.com/blog/manual-accessibility-testing-why-how">
     Manual Accessibility Testing: Why &amp; How
   </a>
   .
@@ -390,11 +388,13 @@ My favorite search engine is [Document](/images/0.4-accessibility-tools.pdf
 <hr />
 
 <h2>Conclusion</h2>
-<p>
-  Having done all this research and analysis a lot of data, I bundled together a
-  list of problems which are higher in priority from an accessibility point of
-  view.
-</p>
+
+The company CTO and my company mentor were very pleased to see all my advances and my research as all of the information would help improve the current projects, but also projects in the future. With all the knowlegde gathered, it became clear where our current clients are failing, what issues we can easily tackle down and which might be more difficult, as well as listing down available solutions which I can implement into the final product. Additionally, my research will help create a good solution that can save the company a lot of time for implementing Web Accessibility.
+
+Having done all this research and analysed a lot of data, I bundled together a
+list of problems which are higher in priority from an accessibility point of
+view.
+
 <p>In general, I found that all websites fail in the following criteria:</p>
 
 <table>
@@ -434,8 +434,7 @@ My favorite search engine is [Document](/images/0.4-accessibility-tools.pdf
   </tbody>
 </table>
 <p>
-  Also, the most common components needing attention are the following, with a
-  special attention to the accordion component.
+  Also, the most common components needing attention are the following:
 </p>
 
 <table>
@@ -451,7 +450,7 @@ My favorite search engine is [Document](/images/0.4-accessibility-tools.pdf
     <tr>
       <td colspan="1" rowspan="1">
         <p>
-          <a href="https://www.w3.org/TR/wai-aria-practices-1.1/examples/accordion/accordion.html&amp;sa=D&amp;source=editors&amp;ust=1640255010016000&amp;usg=AOvVaw0LQcvzLE7_ilyeM6qtsuNa">
+          <a href="https://www.w3.org/TR/wai-aria-practices-1.1/examples/accordion/accordion.html">
             accordion:
           </a>
         </p>
@@ -482,6 +481,15 @@ My favorite search engine is [Document](/images/0.4-accessibility-tools.pdf
     </tr>
   </tbody>
 </table>
+
+The accoridon component has a major relevance since it is widely used among almost every project.
+
+The following step will be to starting designing a solution.
+
+<a href="/posts/presentations-and-meetings">
+	Project Design
+</a>
+
 {/* <p>
   All my findings and the solutions that I propose can be found in my Project
   Presentation&rsquo;s post item.
