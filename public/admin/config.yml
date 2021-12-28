@@ -136,6 +136,12 @@ collections:
           displayFields:
             - "tags.*.name"
           valueField: "tags.*.slug"
+      - label: "Manual PDF"
+        name: "manual_pdf"
+        widget: "file"
+        media_library:
+          config:
+            multiple: true
       - label: "Body"
         name: "body"
         widget: "markdown"

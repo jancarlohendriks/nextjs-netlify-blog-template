@@ -122,5 +122,10 @@ hr {
 iframe {
 	border: 3px solid black;
 	width: 100%;
-	height: 21vw;
+	height: 61vh;
+	min-height: 20rem;
+
+	&.iframe-a4 {
+		height: 61vw;
+	}
 }
