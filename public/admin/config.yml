@@ -139,6 +139,7 @@ collections:
       - label: "Manual PDF"
         name: "manual_pdf"
         widget: "file"
+        required: false
         media_library:
           config:
             multiple: true
