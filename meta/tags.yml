@@ -1,3 +1,19 @@
 tags:
   - slug: document
     name: document
+  - slug: management
+    name: management
+  - slug: analysis
+    name: analysis
+  - slug: advise
+    name: advise
+  - slug: design
+    name: design
+  - slug: realisation
+    name: realisation
+  - slug: judgement
+    name: judgement
+  - slug: communication
+    name: communication
+  - slug: learning-ability
+    name: learning ability
