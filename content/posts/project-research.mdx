@@ -7,481 +7,1428 @@ tags:
   - document
 manual_pdf: /images/0.4-accessibility-tools.pdf
 ---
-<!-- My favorite search engine is [Document](/images/0.4-accessibility-tools.pdf). -->
 
-<p>
-  After the design challenge was clear, which you can find in my Project Plan
-  (v1), I started to dig down into research, exploratory research to be more
-  precise.
-</p>
-<p>
-  I went to look at what the guidelines are, which tools already exist and what
-  are the best practices, and in general get more acquainted with the Web
-  Accessibility world since this was a first timer for me. Hereafter I decided
-  to update my Project Plan (v2) where the research questions and methods are
-  more clearly defined.
-</p>
-<p>Below you can find a more detailed chart picturing this process.</p>
-<p>
-  <img title="" src="https://lh5.googleusercontent.com/ORP5HvV85HLUyqJR3hQwb3WV7eRn_WaCY_14Xunwi-iq8Gow2iDOHfREEwST33uUHBAUUCQCQlIlpfIBn_lsiC6kLQuyPViPOUDBa7jQuoCoAaBEYmZzZL_FQl_nHlRgVpT1AwWX" alt="" />
-</p>
+## The roadmap
 
-<hr />
+After the design challenge was clear, which you can find in my [Project Plan v1](/images/Project-Plan-v1.pdf), I started to dig down into research, exploratory research to be more precise.
 
-<h2>Exploratory Research (Literature Study)</h2>
+I went to look at what the guidelines are, which tools already exist and what are the best practices, and in general get more acquainted with the Web Accessibility world since this was a first timer for me. Hereafter I decided to update my [Project Plan v2](/images/Project-Plan-v2.pdf) where the research questions and methods are more clearly defined.
 
-<p>
-  After my first meeting with the company CTO, I pulled the official
-  <a href="https://webaim.org/standards/wcag/checklist">
-    WebAIM checklist
-  </a>
-  , one of the major Web Accessibility consultants in the world, if not the
-  biggest. This list group&rsquo;s all of the 78 official WCAG accessibility
-  success criteria. I then proceeded to categorize and filter these guidelines
-  depending on their degree of difficulty and in terms of real application to
-  our current projects, the main criteria was time.
-</p>
-<h3>Guidelines</h3>
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSs7ewAi0J6SDdZ9S0o5SwbqW54EEQr84oJERXE5ePrPYgu2ZAoLo0Ab0yNDu5AeJk4NHzD25ViY9zV/pubhtml?gid=7555876&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+Below you can find a more detailed chart picturing this process.
 
-Later on, I reviewed these with the company CTO where he agreed with my results. The most affordable solutions where the ones that can be automated with HTML.
+![](/images/research-1.png)
+* * *
+## Literature Study
 
-<hr />
+### Web Accessibility Requirements & Guidelines
 
-<h3>Existing Tools</h3>
+After my first meeting with the company CTO, I pulled the official [WebAIM checklist](https://webaim.org/standards/wcag/checklist), one of the major Web Accessibility consultants in the world, if not the biggest. This list group’s all of the 78 official WCAG accessibility success criteria. I then proceeded to categorize and filter these guidelines depending on their degree of difficulty and in terms of real application to our current projects, the main criteria was time.
 
-Furthermore, I went on with my research and looked for the tools available in
-the market. As expected, there were thousands, each with their unique
-pro&rsquo;s and cons&rsquo;. Therefore, I decided to focus on the ones that
-were useful for the company, and followed the advice of some articles listing
-the most useful tools. My preferred article and where I selected the tools are [here](https://www.mediacurrent.com/blog/5-website-accessibility-checkers), and the Official Web Consortium Accessibility tools list can be found [here](https://www.w3.org/WAI/ER/tools/?q%3Dwcag-21-w3c-web-content-accessibility-guidelines-21)
+You can donwload the filtered list here: [WebAIM Guidelines Priotiry List](/images/0.2-WebAIM-Guidelines-Priotiry-List.xlsx)
+
+### Existing Tools
+
+Furthermore, I went on with my research and looked for the tools available in the market. As expected, there were thousands, each with their unique pros and cons. Therefore, I decided to focus on the ones that were useful for the company, and followed the advice of some articles listing the most useful tools.
+
+[Official Web Consortium Accessibility tools list](https://www.w3.org/WAI/ER/tools/?q%3Dwcag-21-w3c-web-content-accessibility-guidelines)
+
+[5 Website Accessibility Checkers You Need Today](https://www.mediacurrent.com/blog/5-website-accessibility-checkers) (article)
+
+[Manual Test](https://www.mediacurrent.com/blog/manual-accessibility-testing-why-how) (article)
 
 <table>
-  <tbody>
-    <tr>
-      <td colSpan="1" rowSpan="1">
-        <p>Accessibility Checkers</p>
-      </td>
-      <td colSpan="1" rowSpan="1">
-        <p>Review</p>
-      </td>
-    </tr>
-    <tr>
-      <td colSpan="1" rowSpan="1">
-        <p>WAVE: Website Accessibility Evaluation Tool</p>
-      </td>
-      <td colSpan="1" rowSpan="1">
-        <ul>
-          <li>Works online</li>
-          <li>Only one page at the time</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td colSpan="1" rowSpan="1">
-        <p>SortSite</p>
-      </td>
-      <td colSpan="1" rowSpan="1">
-        <ul>
-          <li>Works online</li>
-          <li>Whole website on:</li>
-					<ul>
-						<li>Errors</li>
-						<li>Accessibility</li>
-						<li>Compatibility</li>
-						<li>Search</li>
-						<li>Standards</li>
-						<li>Usability</li>
-					</ul>
-        </ul>
-        <ul>
-          <li>
-            Clear overview of accessibility issues grouped by priority levels
-          </li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td colSpan="1" rowSpan="1">
-        <p>aXe: The Accessibility Engine</p>
-      </td>
-      <td colSpan="1" rowSpan="1">
-        <ul>
-          <li>Works in the DevTools Inspector</li>
-          <li>Good for single page testing</li>
-          <li>Displays a detailed summary of errors</li>
-          <li>It requiers a more tedious kind of testing since it is not a global checker</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td colSpan="1" rowSpan="1">
-        <p>Pa11y</p>
-      </td>
-      <td colSpan="1" rowSpan="1">
-				<ul>
-          <li>Npm package that creates a local dashboard with web accessiblity issues</li>
-					<li>Requires an installation for every project</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td colSpan="1" rowSpan="1">
-        <p>Tota11y</p>
-      </td>
-      <td colSpan="1" rowSpan="1">
-				<ul>
-          <li>JavaScript file that inserts a small button in the bottom corner of your document</li>
-					<li>It inspects a selected element and shows the accessiblity issues related to that element</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
+
+<tbody>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+Accessibility Checkers
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+Review
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+WAVE: Website Accessibility Evaluation Tool
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+- Works online
+- Only one page at the time
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+SortSite
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+- Works online
+- Whole website on:
+
+- Errors
+- Accessibility
+- Compatibility
+- Search
+- Standards
+- Usability
+
+- Clear overview of accessibility issues grouped by priority levels
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+aXe: The Accessibility Engine
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+- Works in the DevTools Inspector
+- Tests whole website
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+Pa11y
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+- Npm package
+- Requires installation per project
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+Tota11y
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+- JavaScript file that inserts a small button in the bottom corner of your document
+- Requires installation per project
+
+</td>
+
+</tr>
+
+</tbody>
+
 </table>
-<p>
-  The clear winner was SorSite since it over delivered in all aspects. It works
-  on the web, so no installation is needed, it checks not only one page but all
-  the pages belonging to the same website which saves an incredible amount of
-  time and displays a very clear overview of all the issues found in a nice
-  report.
-</p>
 
-<hr />
+The clear winner was SorSite since it over delivered in all aspects. It works on the web, so no installation is needed, it checks not only one page but all the pages belonging to the same website which saves an incredible amount of time and displays a very clear overview of all the issues found in a nice report.
 
-## Conclusions
+---
 
-So far, I managed to explore and analayse the available solutions for Web Accessibility. Not only that, but also list down the requirements for Web Accesiblity, categorize them in order to know what is feasable for the company and also summarize the tools that can help us the most. With all this knowlegde I was ready to embark the next step and explore how I can implement it to real use cases within the company.
+## Feedback & Decision making
 
-In short, my findings can be summarized as follow:
+After my initial research was concluded, I met again with the company CTO to review the results and define next steps.
 
-- The easiest accessiblity issues to tackle down are those that involve HTML and proper semantics (use of code).
-- Among the thousand of tools out there, SortSite provides the best solution to run a quick global automated test since it does not require any installation, can be run on the browser and provides a very clear and broad overview with information regarding the issues without the hassle of it being over bloated, making the information gathered quite comprehensive.
+Some feedback I got:
 
-<hr />
+- Use the 80/20 rule → biggest output with least amount of input
+- Zoom out of the project scope into a bigger vision/impact (not only focus in one client, but rather into a solution that is applicable to various clients)
 
-<h2>Decision making (Analysis)</h2>
-<p>
-  After my initial research was concluded, I met again with the company CTO to
-  review the results and define next steps.
-</p>
-<p>Some feedback I got:</p>
-<ul>
-  <li>Use the 80/20 rule &rarr; biggest output with least amount of input</li>
-  <li>
-    Zoom out of the project scope into a bigger vision/impact (not only focus in
-    one client, but rather into a solution that is applicable to various
-    clients)
-  </li>
-</ul>
-<p>
-  In my research I also found that It is estimated that around 15 percent of the
-  world&rsquo;s population live with some sort of disability. So the logical
-  formula would be:
-</p>
-<p>more visitors === most probability of visitors with some disability</p>
-<p>
-  Luckily, this is a number Bravoure possesses because they use Google
-  Analytics.
-</p>
-<p>The plan after having the target websites was clear:</p>
-<ul>
-  <li>Run Automated Checks (use the Sortsite Tool)</li>
-  <li>Run Manual Tests</li>
-</ul>
-<p>
-  80/20 &rarr; Summarize things in common &rarr; frame project &rarr;
-  step-by-step plan &rarr; action.
-</p>
+In my research I also found that It is estimated that around 15 percent of the world’s population live with some sort of disability. So the logical formula would be:
 
-<hr />
+more visitors === most probability of visitors with some disability
 
-<h2>Clients With Most Visitors</h2>
-<p>
-  Looking into all the data I came up with the following list. Because of
-  privacy reasons I cannot display the actual visitor numbers of these clients.
-</p>
+Luckily, this is a number Bravoure possesses because they use Google Analytics.
+
+The plan after having the target websites was clear:
+
+- Run Automated Checks (use the Sortsite Tool)
+- Run Manual Tests
+
+80/20 → Summarize things in common → frame project → step-by-step plan → action.
+
+---
+
+## Exploratory Data Analysis
+
+### Clients With Most Visitors
+
+Looking into all the data I came up with the following list. Because of privacy reasons I cannot display the actual visitor numbers of these clients.
 
 <table>
-  <tbody>
-    <tr>
-      <td colSpan="1" rowSpan="1">
-        <p>2016-2017</p>
-      </td>
-    </tr>
-    <tr>
-      <td colSpan="1" rowSpan="1">
-        <p>PARADISO</p>
-      </td>
-    </tr>
-    <tr>
-      <td colSpan="1" rowSpan="1">
-        <p>ADE</p>
-      </td>
-    </tr>
-    <tr>
-      <td colSpan="1" rowSpan="1">
-        <p>CHANGE</p>
-      </td>
-    </tr>
-    <tr>
-      <td colSpan="1" rowSpan="1">
-        <p>AWAKENINGS</p>
-      </td>
-    </tr>
-    <tr>
-      <td colSpan="1" rowSpan="1">
-        <p>EYE</p>
-      </td>
-    </tr>
-    <tr>
-      <td colSpan="1" rowSpan="1">
-        <p>BKS</p>
-      </td>
-    </tr>
-    <tr>
-      <td colSpan="1" rowSpan="1">
-        <p>ITA</p>
-      </td>
-    </tr>
-    <tr>
-      <td colSpan="1" rowSpan="1">
-        <p>EBBINGE</p>
-      </td>
-    </tr>
-  </tbody>
+
+<tbody>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+2016-2017
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+PARADISO
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+ADE
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+CHANGE
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+AWAKENINGS
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+EYE
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+BKS
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+ITA
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+EBBINGE
+
+</td>
+
+</tr>
+
+</tbody>
+
 </table>
 
 <table>
-  <tbody>
-    <tr>
-      <td colSpan="1" rowSpan="1">
-        <p>2020-2021</p>
-      </td>
-    </tr>
-    <tr>
-      <td colSpan="1" rowSpan="1">
-        <p>CHANGE</p>
-      </td>
-    </tr>
-    <tr>
-      <td colSpan="1" rowSpan="1">
-        <p>PARADISO</p>
-      </td>
-    </tr>
-    <tr>
-      <td colSpan="1" rowSpan="1">
-        <p>ADE</p>
-      </td>
-    </tr>
-    <tr>
-      <td colSpan="1" rowSpan="1">
-        <p>ITA</p>
-      </td>
-    </tr>
-    <tr>
-      <td colSpan="1" rowSpan="1">
-        <p>EYE</p>
-      </td>
-    </tr>
-    <tr>
-      <td colSpan="1" rowSpan="1">
-        <p>AWAKENINGS</p>
-      </td>
-    </tr>
-    <tr>
-      <td colSpan="1" rowSpan="1">
-        <p>EBBINGE</p>
-      </td>
-    </tr>
-    <tr>
-      <td colSpan="1" rowSpan="1">
-        <p>BKS</p>
-      </td>
-    </tr>
-  </tbody>
+
+<tbody>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+2020-2021
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+CHANGE
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+PARADISO
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+ADE
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+ITA
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+EYE
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+AWAKENINGS
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+EBBINGE
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+BKS
+
+</td>
+
+</tr>
+
+</tbody>
+
 </table>
-<p>
-  I also wanted to look into the numbers before the pandemic to see if there was
-  a correlation. Although the numbers for 2020-2021 are way lower than
-  previously, the top 3 remain the same. The reason behind could also be that
-  all the clients have been equally affected.
-</p>
 
-<hr />
+I also wanted to look into the numbers before the pandemic to see if there was a correlation. Although the numbers for 2020-2021 are way lower than previously, the top 3 remain the same. The reason behind could also be that all the clients have been equally affected.
 
-<h2>Automated Accessibility Test</h2>
+---
 
-<p>
-  Since a lot of the problems in Web Accessibility can be found in the semantics
-  used to build web applications, automated tools can scan all the code and
-  bring back a list of all the errors found. Following my previous research I
-  decided to use SortSite since it didn't require me to install any program and
-  works fine on the web. Also, the trial and premium version scan all the pages
-  of the same website, while most other tools don&rsquo;t.
-</p>
-<p>
-  <a href="https://try.powermapper.com/demo/sortsite">
-    SortSite&rsquo;s PowerMapper tool
-  </a>
-</p>
-<p>
-  I ran the test on the 3 most visited client&rsquo;s websites and created a
-  pivot table, where the matching errors could be found. The following are the
-  errors matched:
-</p>
+### Automated Accessibility Test
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSzCQx3smYXcsbU9sUPC5Vzl_tZwPXWkiRzTOoiqJmXpnkKZUnOAaYUc5v9WiLTlVDelXjuNE9htBnT/pubhtml?gid=217602829&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+Since a lot of the problems in Web Accessibility can be found in the semantics used to build web applications, automated tools can scan all the code and bring back a list of all the errors found. Following my previous research I decided to use SortSite since it didn't require me to install any program and works fine on the web. Also, the trial and premium version scan all the pages of the same website, while most other tools don’t.
 
-<ul>
-  <li>
-    Avoid specifying a new window as the target of a link with target=_blank.
-  </li>
-  <li>
-    Don't use CSS animations or transitions in interactions without giving the
-    user a way to turn them off.
-  </li>
-  <li>Duplicate id - the same ID is used on more than one element.</li>
-  <li>
-    Each &lt;a&gt; element must contain text or an img with an alt attribute.
-  </li>
-  <li>Ensure that text and background colors have a 7:1 contrast ratio.</li>
-  <li>Ensure that text and background colors have enough contrast.</li>
-  <li>Headings should not be empty.</li>
-  <li>HTML form control has no accessible name.</li>
-  <li>iframe and frame elements must have a title attribute.</li>
-  <li>
-    Link uses general text like 'Click Here' with no surrounding text explaining
-    link purpose.
-  </li>
-  <li>
-    Several links on a page share the same link text, but go to different
-    destinations.
-  </li>
-  <li>
-    The CSS outline or border style on this element makes it difficult or
-    impossible to see the dotted link focus outline.
-    <hr />
-  </li>
-</ul>
-<h2>Manual Accessibility Test</h2>
-<p>
-  Next to the automated test, I also decided to run a manual test in case there
-  was any issue not found yet. To do so I followed the following article:
-  <a href="https://www.mediacurrent.com/blog/manual-accessibility-testing-why-how">
-    Manual Accessibility Testing: Why &amp; How
-  </a>
-  .
-</p>
-<p>
-  The results can be found in the following matrix, where all 3 websites fail in
-  most of the tests.
-</p>
+Here is the link to this awesome tool: [SortSite’s PowerMapper tool](https://try.powermapper.com/demo/sortsite=1641862033837320&usg=AOvVaw2TgKmSaGPrqiSBWjzw8hsf)
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS5M5dhj9Qvkokzyu9qK4337GhWy5eFZJDj0rjo6Ij7KV5Pbv6GrxFCloL0_mr6Yf_Re7zcqC7Qfj3a/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+I ran the test on the 3 most visited client’s websites and created a pivot table, where the matching errors could be found. The following are the errors matched:
 
-<hr />
+- Avoid specifying a new window as the target of a link with target=\_blank.
+- Don't use CSS animations or transitions in interactions without giving the user a way to turn them off.
+- Duplicate id - the same ID is used on more than one element.
+- Each `<a>` element must contain text or an img with an alt attribute.
+- Ensure that text and background colors have a 7:1 contrast ratio.
+- Ensure that text and background colors have enough contrast.
+- Headings should not be empty.
+- HTML form control has no accessible name.
+- iframe and frame elements must have a title attribute.
+- Link uses general text like 'Click Here' with no surrounding text explaining link purpose.
+- Several links on a page share the same link text, but go to different destinations.
+- The CSS outline or border style on this element makes it difficult or impossible to see the dotted link focus outline.
 
-<p>I also run a manual test on the most popular pages of each website.</p>
+You can download the whole test here: [Clients Most Visitors](/images/1.1-Clients-Most-Visitors.xlsx)
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRWs9TqSKh0lDD2l9ydubAfr22KikqFIYmulO_4ucRTC-oMdQRpCYyWYqOI-Wig7wCBaYjAahvUs_1z/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+  ***
 
-<hr />
+### Manual Accessibility Test
 
-<h2>Conclusion</h2>
+Next to the automated test, I also decided to run a manual test since not all issues can be found automatically. To do so, I followed quite a good article, [Manual Accessibility Testing: Why & How](https://www.mediacurrent.com/blog/manual-accessibility-testing-why-how=1641862033838766&usg=AOvVaw0ARjTCWMXu658D7hvU7iKw).
 
-The company CTO and my company mentor were very pleased to see all my advances and my research as all of the information would help improve the current projects, but also projects in the future. With all the knowlegde gathered, it became clear where our current clients are failing, what issues we can easily tackle down and which might be more difficult, as well as listing down available solutions which I can implement into the final product. Additionally, my research will help create a good solution that can save the company a lot of time for implementing Web Accessibility.
-
-Having done all this research and analysed a lot of data, I bundled together a
-list of problems which are higher in priority from an accessibility point of
-view.
-
-<p>In general, I found that all websites fail in the following criteria:</p>
+The results can be found in the following matrix, where all 3 websites fail in most of the tests.
 
 <table>
-  <tbody>
-    <tr>
-      <td colSpan="1" rowSpan="1">
-        <p>Problem</p>
-      </td>
-      <td colSpan="1" rowSpan="1">
-        <p>Priority</p>
-      </td>
-    </tr>
-    <tr>
-      <td colSpan="1" rowSpan="1">
-        <p>Website navigation</p>
-      </td>
-      <td colSpan="1" rowSpan="1">
-        <p>Critical</p>
-      </td>
-    </tr>
-    <tr>
-      <td colSpan="1" rowSpan="1">
-        <p>Content readability</p>
-      </td>
-      <td colSpan="1" rowSpan="1">
-        <p>High</p>
-      </td>
-    </tr>
-    <tr>
-      <td colSpan="1" rowSpan="1">
-        <p>Contrast Ratio</p>
-      </td>
-      <td colSpan="1" rowSpan="1">
-        <p>Low</p>
-      </td>
-    </tr>
-  </tbody>
+
+<tbody>
+
+<tr>
+
+<td colSpan="2" rowSpan="1">
+
+TEST
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+ADE
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+CHANGE
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+EYE
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="4">
+
+Keyboard Only Navigation
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+Do you have a “skip to main content” link at the top of the page, before your navigation? This prevents users from having to go through your entire navigation over and over again just to get to the main content of your page.
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+No
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+No
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+No
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+Are your menus/mega-menus navigable? Some menus are not accessible without a mouse.
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+No
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+No
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+Yes
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+Are you able to access the different sections of your page with only a keyboard? Don’t let your users miss out on valuable content!
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+No
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+No
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+No
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+Are links and form fields brought into focus (meaning do you see an outline around links and do you see a cursor in form fields)?
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+Yes
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+Yes
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+No
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="5">
+
+Test with a[ Screen Reader](https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn?hl%3Den=1641862033845087&usg=AOvVaw0Rg4LZeKLVLMFsyqfV8w8i)
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+When announcing the link to home typically associated with the logo on the site - are you able to tell where the link directs you from what it is being said? What about other links: does what is read to you give context as to where it will lead?
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+No
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+No
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+No
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+If there is more than one menu, are you able to tell which menu you are on and what link you are on within that menu?
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+No
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+Yes
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+No
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+For all forms, are you able to tell what information is expected of you when you are asked to input text (i.e. does it speak something like “enter search terms”)
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+No
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+Yes
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+Yes
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+Is all of the on-page content read to you?
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+No
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+No
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+No
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+Does the alternative text of an image give appropriate context as to what the image is about/its value to the overall story?
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+No
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+No
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+Yes
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+[Double Check Your Colors](https://webaim.org/resources/contrastchecker/=1641862033850798&usg=AOvVaw2cWh11gO3fTrBS2JrwYUag)
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+Either using browser tools or testing screen shots in a program such as Photoshop, grab the foreground and background colors.
+
+Enter these into the respective fields on the Color Contrast Checker webpage
+
+Look at the font size in question and determine if it is a pass or fail
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+No
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+No
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+No
+
+</td>
+
+</tr>
+
+</tbody>
+
 </table>
-<p>
-  Also, the most common components needing attention are the following:
-</p>
+
+---
+
+I also run a manual test on the most popular pages of each website.
+
+[1.2.2 Most popular pages Manual Test](https://docs.google.com/spreadsheets/u/0/d/1aqG5hpayHns4I0z17epp6pfQ17jIhT4VZ-Qi5gMjJ7o/edit=1641862033852937&usg=AOvVaw1D1uF4EKyT8ejrSwYJtruQ)
 
 <table>
-  <tbody>
-    <tr>
-      <td colSpan="1" rowSpan="1">
-        <p>PROBLEM</p>
-      </td>
-      <td colSpan="1" rowSpan="1">
-        <p>RELEVANCE</p>
-      </td>
-    </tr>
-    <tr>
-      <td colSpan="1" rowSpan="1">
-        <p>
-          <a href="https://www.w3.org/TR/wai-aria-practices-1.1/examples/accordion/accordion.html">
-            accordion:
-          </a>
-        </p>
-        <p>- no focus state</p>
-        <p>- not machine readable</p>
-      </td>
-      <td colSpan="1" rowSpan="1">
-        <p>High</p>
-      </td>
-    </tr>
-    <tr>
-      <td colSpan="1" rowSpan="1">
-        <p>
-          filter navigation appears after scrolling, dropdown not accessible
-        </p>
-      </td>
-      <td colSpan="1" rowSpan="1">
-        <p>High</p>
-      </td>
-    </tr>
-    <tr>
-      <td colSpan="1" rowSpan="1">
-        <p>tickets widget</p>
-      </td>
-      <td colSpan="1" rowSpan="1">
-        <p>High</p>
-      </td>
-    </tr>
-  </tbody>
+
+<tbody>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+SITE
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+PAGE
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+PROBLEM
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+PRIO
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="7">
+
+ADE
+
+</td>
+
+<td colSpan="1" rowSpan="2">
+
+/en/program/
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+(slider) images no ALT
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+Low
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+[section region title](https://www.w3.org/TR/2017/NOTE-wai-aria-practices-1.1-20171214/examples/landmarks/region.html=1641862033856578&usg=AOvVaw2OUjrNY-WAClYfxT0CABm0)
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+Low
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="3">
+
+/en/about/
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+[accordion:](https://www.w3.org/TR/wai-aria-practices-1.1/examples/accordion/accordion.html=1641862033858452&usg=AOvVaw1j_S_jA2DsHDq4fX5ZNvn6)
+
+- no focus state
+
+- not machine readable
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+High
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+images no ALT
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+Low
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+image video no description & no focus styling
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+Low
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+/en/news/
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+images no ALT
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+Low
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+/en/faq-and-contact/
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+[accordion:](https://www.w3.org/TR/wai-aria-practices-1.1/examples/accordion/accordion.html=1641862033863755&usg=AOvVaw0w2aFmddYddKNJrkf_YOBK)
+
+- no focus state
+
+- not machine readable
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+High
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="12">
+
+EYE
+
+</td>
+
+<td colSpan="1" rowSpan="2">
+
+/nl/whats-on
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+program list item has 2 links, screen reader reads twice
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+Medium
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+filter navigation appears after scrolling, dropdown not accessible
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+High
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="3">
+
+/nl/whats-on/alle-films
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+images no ALT
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+Low
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+focus on menu items while menu is not open
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+Medium
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+[section region title](https://www.w3.org/TR/2017/NOTE-wai-aria-practices-1.1-20171214/examples/landmarks/region.html=1641862033870220&usg=AOvVaw15DPCdERfZqjVD3xqLRcox)
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+Low
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="4">
+
+/nl/plan-je-bezoek
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+section region title
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+Low
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+FAQ accordion
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+High
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+Download PDF link no context
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+Medium
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+newsletter privacy disclaimer checkbox
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+Low
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="3">
+
+/nl/restaurant
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+section region title
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+Low
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+accordion
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+High
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+tickets widget
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+High
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="5">
+
+CHANGE
+
+</td>
+
+<td colSpan="1" rowSpan="2">
+
+/duurzaam-nieuws
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+news card item title
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+Low
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+pagination number + arrows
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+Low
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+/changemakers/willem-smelik
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+  X
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+/future-leadership/blog-op-naar-glasgow-voor-de-vn-klimaatconferentie-cop26-37276
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+  X
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+/finance/actiam-stapte-voor-zwitserleven-na-jaren-van-investeren-uit-shell-zwitserleven-directeur-hans-visser-legt-uit-waarom-37287
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+  X
+</td>
+
+</tr>
+
+</tbody>
+
 </table>
 
-The accoridon component has a major relevance since it is widely used among almost every project.
+### Results
 
-The following step will be to starting designing a solution. See [Project Design](/posts/project-design).
+Having done all this research and analysed a lot of data, I bundled together a list of problems which are higher in priority from an accessibility point of view.
+
+In general, I found that all websites fail in the following criteria:
+
+[1.3 Results](https://docs.google.com/document/u/0/d/1TyU18PyLa0nz-t0bS0t6nCskXu-Ha_mRJZ67uSoPbHg/edit=1641862033882574&usg=AOvVaw2D7WuKML04-imYoeQluacj)
+
+<table>
+
+<tbody>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+Problem
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+Priority
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+Website navigation
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+Critical
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+Content readability
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+High
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+Contrast Ratio
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+Low
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+Also, the most common components needing attention are the following:
+
+<table>
+
+<tbody>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+PROBLEM
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+RELEVANCE
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+[accordion:](https://www.w3.org/TR/wai-aria-practices-1.1/examples/accordion/accordion.html=1641862033886317&usg=AOvVaw2MdcWSJkeVZlxo1f0aMwx6)
+
+- no focus state
+
+- not machine readable
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+High
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+filter navigation appears after scrolling, dropdown not accessible
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+High
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colSpan="1" rowSpan="1">
+
+tickets widget
+
+</td>
+
+<td colSpan="1" rowSpan="1">
+
+High
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+The accordion component has a major relevance since it is widely used among almost every project.
+
+### Advice Presentation
+
+I presented my findings together with the following Advice document: [Web Accessibility For Bravoure](/images/1.4-Web-Accessibility-For-Bravoure.pdf)
+
+The company’s CTO and my internship mentor were very glad to see all my progress.
+
+Furthermore, the feedback that I received was that I could also bundle all of the solutions in one single place making it easy to reach. So instead of creating an extension that would only work on a certain text editor, I could make this tool available online so it wasn’t dependent on any text editor.
+
+---
+
+## Conclusion
+
+The company CTO and my company mentor were very pleased to see all my advances and my research as all of the information and findings would help improve the current projects, but also projects in the future. With all the knowledge gathered, it became clear where our current clients are failing, what issues we can easily tackle down and which might be more difficult, as well as listing down available solutions which I can implement into the final product.
+
+Additionally, my research will help create a good solution that can save the company a lot of time for implementing Web Accessibility.

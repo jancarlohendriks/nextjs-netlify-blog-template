@@ -1,0 +1,304 @@
+---
+slug: project-realisation
+title: Project Realisation
+date: 2021-12-28
+author: jancarlo
+tags:
+  - judgement
+  - realisation
+---
+
+## Framework
+
+Instead of going blindly, I decided to do some research as per which development stack was appropriate for this project. The framework should be easily customisable and extensible, not take much time to learn, and preferably be accessible.
+
+<table>
+
+<tbody>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+
+Framework
+
+</td>
+
+<td colspan="1" rowspan="1">
+
+Findings
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+
+Next.js
+
+</td>
+
+<td colspan="1" rowspan="1">
+
+*   Way to go in most web development projects
+*   It is not opinionated toward the documentation use-case
+*   Quite extensible
+*   Quite customisable
+*   Not accessible out of the box
+*   Built with React
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+
+VuePress
+
+</td>
+
+<td colspan="1" rowspan="1">
+
+*   Content-centric website and provides tailored documentation features out of the box
+*   Extensible
+*   Basic accessibility
+*   Basic customizability
+*   Built with Vue.js (Dev team at Bravoure works with React)
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+
+Docsify
+
+</td>
+
+<td colspan="1" rowspan="1">
+
+*   Basic accessibility
+*   Very basic customization and extensibilization
+*   Built with Vue.js (Dev team at Bravoure works with React)
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+
+GitBook
+
+</td>
+
+<td colspan="1" rowspan="1">
+
+*   Very clean design
+*   Focus shifting towards a commercial product rather than an open-source tool
+*   Very basic customization and extensibilization
+*   Not very customisable
+*   Created by Github
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+
+Docusaurus
+
+</td>
+
+<td colspan="1" rowspan="1">
+
+*   Accessible out of the box
+*   Small learning curve
+*   Extensible
+*   Customisable
+*   Live Code blocks out of the box
+*   Built with React
+*   Created by Facebook
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+### Conclusion
+
+There are some fantastic tools out there, each for a special use case, and specially for documentation purposes. However, the clear winner was docusaurus as it offers all the features I am looking for in this project, most of them out of the box.
+
+* * *
+
+## Built-in code editor
+
+Since one of the features of my product is displaying code, I went on a search for the available solutions. Below a description of my findings.
+
+<table>
+
+<tbody>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+
+Framework
+
+</td>
+
+<td colspan="1" rowspan="1">
+
+Findings
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+
+[ACE](https://ace.c9.io/%23nav%3Dhiglighter%26api%3Dace)
+
+</td>
+
+<td colspan="1" rowspan="1">
+
+*   Embeddable code editor written in JavaScript
+*   Syntax highlighting
+*   Automatic indent and outdent
+*   48.7 MB
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+
+[MONACO](https://microsoft.github.io/monaco-editor/)
+
+</td>
+
+<td colspan="1" rowspan="1">
+
+*   Developed by Microsoft
+*   Provides syntax highlighting
+*   Has built-in autocomplete
+*   Quite extensible
+*   74.9 MB
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+
+[React Live](https://react-live.netlify.app/)
+
+</td>
+
+<td colspan="1" rowspan="1">
+
+*   Editable live React components
+*   76.1 kB
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+
+[React Syntax Highlighter](https://www.npmjs.com/package/react-syntax-highlighter)
+
+</td>
+
+<td colspan="1" rowspan="1">
+
+*   Syntax highlighting component for React
+*   Simple yet customisable
+*   1.84 MB
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+### Conclusion
+
+Each and every tool is great, some take more memory than others but also because of their extended capabilities. Further in my research I found that Docusaurus also offers this functionality out of the box, which in reality utilizes the React Live package. This is great because it is the smallest one and works for the purpose of my application. But if desired in the future I could also use one of the others to extend my product even more.
+
+* * *
+
+## Set-up
+
+### Folder structure & Content
+
+The content is built out of Markdown files. Markdown is a lightweight markup language for creating formatted text using a plain-text editor. This enables developers to quickly write or change texts without having to write the HTML.
+
+The folder structure separates the content and the styling of my product leaving it way more clean and easy to work on. The pages are generated from the files and folders within the docs folder.
+
+![](/images/realisation-2.png)
+
+### Sidebar
+
+In Docusaurus, the sidebar can be automatically generated following your content folder structure, including subpages (which are in the subfolders), taking a great part of the work out of your hands. The other way is to do it manually, offering more customizability. I chose the latter since it offered more control and I could add the online tools from my design.
+
+* * *
+
+### Checklist tool with accordions
+
+Accordions are also a feature that come out of the box. I decided to use this feature to create a Checklist tool to review each Accessibility requirement by every project. When the review is done, you can click on the Print checklist button which is a button I created to expand all accordions and print everything.
+
+![](/images/realisation-4.png)
+
+* * *
+
+### Library
+
+The library page includes the components that are reusable by the developer. Each component page is based out of a Markdown file with some React magic. This lets me write the code directly in the file and then it will also display a live version of the component.
+
+![](/images/realisation-1.png)
+
+* * *
+
+### Custom Home page
+
+In order to give my application its own personality, I changed some colors and added custom icons from [Icons8](https://icons8.com/).
+
+![](/images/realisation-3.png)
+
+* * *
+
+## Deployment
+
+Since this project is still a proof of concept and there is no domain yet attached to it, I decided to make it use Netlify. This service lets me watch every change in my project’s repo and automatically include those changes in the deployed version. This is also way more easy to maintain for the developers.
+
+The online version is the following: [https://docu-quick-a11y.netlify.app/](https://docu-quick-a11y.netlify.app/)
+
+* * *
+
+## Final Conclusion
+
+The project realisation was a success since it includes all of the features established by the design such as content, the tools and the library. I managed to do so by selecting the appropriate technology stack after doing the appropriate research, displaying a good sense of judgement. Furthermore, I also successfully deployed the product and is currently online ready to be used as well as easily extensible upon desire.
